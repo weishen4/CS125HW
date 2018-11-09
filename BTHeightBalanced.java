@@ -1,3 +1,4 @@
+
 public class YourBinaryTree extends BinaryTree {
     protected boolean heightBalanced() {
         return heightBalanced(root);
@@ -21,12 +22,8 @@ public class YourBinaryTree extends BinaryTree {
 
         int leftLevel = 0;
         int rightLevel = 0;
-        if (cur.left != null) {
-            leftLevel += 1 + countLevel(cur.left);
-        }
-        if (cur.right != null) {
-            rightLevel += 1 + countLevel(cur.right);
-        }
+        leftLevel += 1 + countLevel(cur.left);
+        rightLevel += 1 + countLevel(cur.right);
         return Math.max(leftLevel, rightLevel);
     }
 }
